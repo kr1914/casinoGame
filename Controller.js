@@ -1,9 +1,9 @@
-import { createRequire } from "module";
+import { createRequire, syncBuiltinESMExports } from "module";
 const require = createRequire(import.meta.url); 
 
 
 const http = require('http');
-import {socketController} from './lrlModules/socketController.js';
+const websocket = require('ws');
 
 
 const server = http.createServer((req, rsp) => {
@@ -14,6 +14,12 @@ const server = http.createServer((req, rsp) => {
 server.listen(3030, () =>{
     console.log("server Listening");
 });
+const wbss = new websocket.Server({server:server});
+
+wbss.on('connection', (wb) => {
+    console.log('socket connected');
+    wb.send("socket Service on");
+    
+});
 
 
-const socket = new socketController();
