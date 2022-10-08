@@ -1,0 +1,12 @@
+1. git 명령어 ( git init)
+    가. 커밋 방법
+        1) git add #{file명}
+        2) git commit -m "#{커밋 메세지}"
+    나. 레포지토리 최신화
+        1) git checkout #{브런치명} :: (ex)main
+        2) git reset --hard origin/#{브런치명}
+    다. 변경점 임시 저장
+        1) git stash
+
+    -- #{브런치명} :: main
+    -- #{file명} :: index.html
