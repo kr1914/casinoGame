@@ -18,6 +18,7 @@ const wbss = new websocket.Server({server:server});
 
 wbss.on('connection', (wb) => {
     console.log('socket connected');
+    console.log(wb);
     wb.send("socket Service on");
     
 });
