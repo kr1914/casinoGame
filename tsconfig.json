@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+      "noImplicitAny": false,
+      "noEmitOnError": true,
+      "removeComments": false,
+      "sourceMap": true,
+      "target": "esnext",
+      "outDir": "bin",
+      "module":"esnext"
+    },
+    "include": [
+      "scripts/**/*",
+      "src"
+    ],
+    "type":"module"
+  }
